@@ -1,0 +1,21 @@
+setwd("~/Desktop/School/PredAn/SemProject")
+getwd()
+Disney<-read.csv("DisneyDataE.csv", header = TRUE)
+names(Disney)
+cor(Disney)
+dim(Disney)
+getwd()
+smp_size<-floor(0.5*nrow(Disney))
+smp_size
+train_ind<-sample(seq_len(nrow(Disney)),size=smp_size)
+training_set<-Disney[train_ind,]
+#fix(train_set)
+test_set<-Disney[-train_ind,]
+#fix(test_set)
+save(training_set,file="trainingset.rda")
+save(test_set,file = "testset.rda")
+load(file="trainingset.rda")
+dim(training_set)
+lm.fit=lm(Ticket~Year+Rides+Following, data=Disney)
+summary(lm.fit)
+

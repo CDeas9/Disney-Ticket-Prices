@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538749867525.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3624372",
+    "id" : "13FFD404",
+    "lastKnownWriteTime" : 1539958551,
+    "last_content_update" : 1539958551242,
+    "path" : "~/Desktop/School/PredAn/SemProject/SemesterProject/SemesterProject.R",
+    "project_path" : "SemesterProject.R",
+    "properties" : {
+        "cursorPosition" : "20,0",
+        "scrollLine" : "1",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
