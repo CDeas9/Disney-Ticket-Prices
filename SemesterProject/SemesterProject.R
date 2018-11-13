@@ -21,6 +21,7 @@ lm.fit=lm(Ticket~Year+Rides+Following, data=training_set)
 summary(lm.fit)
 #decision trees
 library(MASS)
+library(tree)
 set.seed(1)
 tree.disney=tree(Ticket~Year+Rides+Following, data=training_set)
 plot(tree.disney)
@@ -28,9 +29,20 @@ text(tree.disney, pretty=0)
 summary(tree.disney)
 abline(0,1)
 yhat=predict(tree.disney,newdata=training_set)
-mean((yhat-training_set)^2)
 mean((yhat-training_set$Ticket)^2)
-#bagging
+#bagging p.329
 library(randomForest)
 bag.disney=randomForest(Ticket~Year+Rides+Following, data=training_set, mtry=3)
 bag.disney
+yhat.bag = predict(bag.disney, newdata = training_set)
+plot(yhat.bag)
+mean((yhat-training_set$Ticket)^2)
+rf.disney = randomForest(Ticket~Year+Rides+Following, data=training_set, mtry=3, importance = TRUE)
+importance(rf.disney)
+varImpPlot(rf.disney)
+lmresults<-predict(lm.fit,test_set)
+lmresults
+sqrt(MSE<-sum((lmresults-test_set$Ticket)^2)/nrow(test_set))
+nlmresults<-predict(bag.disney,test_set)
+nlmresults
+sqrt(MSE<-sum((nlmresults-test_set$Ticket)^2)/nrow(test_set))

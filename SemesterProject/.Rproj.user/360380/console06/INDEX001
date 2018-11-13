@@ -1,1 +1,1 @@
-[]
+[{"allow_restart":true,"alt_buffer":false,"autoclose":0,"buffered_output":"","caption":"Terminal 1","channel_id":"3540","channel_mode":1,"child_procs":false,"cols":109,"cwd":"~/Desktop/School/PredAn/SemProject/SemesterProject","exit_code":null,"handle":"FBDF9C9F","interaction_mode":2,"max_output_lines":1000,"restarted":false,"rows":16,"shell_type":7,"show_on_output":false,"terminal_sequence":1,"title":"~/Desktop/School/PredAn/SemProject/SemesterProject","track_env":true,"zombie":false}]
